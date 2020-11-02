@@ -1,0 +1,6 @@
+C:\Users\jluca\OneDrive\Escritorio\Workspace\Programacion 2\tp_laboratorio_2\TP_NRO_1\Entidades\bin\Debug\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\Workspace\Programacion 2\tp_laboratorio_2\TP_NRO_1\Entidades\bin\Debug\Entidades.pdb
+C:\Users\jluca\OneDrive\Escritorio\Workspace\Programacion 2\tp_laboratorio_2\TP_NRO_1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\jluca\OneDrive\Escritorio\Workspace\Programacion 2\tp_laboratorio_2\TP_NRO_1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\jluca\OneDrive\Escritorio\Workspace\Programacion 2\tp_laboratorio_2\TP_NRO_1\Entidades\obj\Debug\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\Workspace\Programacion 2\tp_laboratorio_2\TP_NRO_1\Entidades\obj\Debug\Entidades.pdb
