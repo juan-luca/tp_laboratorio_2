@@ -1,9 +1,0 @@
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\bin\Debug\Archivos.dll
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\bin\Debug\Archivos.pdb
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\bin\Debug\Excepciones.dll
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\bin\Debug\Excepciones.pdb
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\obj\Debug\Archivos.csproj.CopyComplete
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\obj\Debug\Archivos.dll
-C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TP3\Archivos\obj\Debug\Archivos.pdb
