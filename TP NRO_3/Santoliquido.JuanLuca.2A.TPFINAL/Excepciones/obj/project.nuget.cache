@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+xaxB8Ahhe8/iFlzN+AJTiHk8pkWD2tKlJGry0g15NtQkF2ISMIhlbg0LdbT347XZHytZb3kXIq34IQzKjCiEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jluca\\OneDrive\\Escritorio\\tp_laboratorio_2\\TP NRO_3\\Santoliquido.JuanLuca.2A.TPFINAL\\Excepciones\\Excepciones.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jluca\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jluca\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
