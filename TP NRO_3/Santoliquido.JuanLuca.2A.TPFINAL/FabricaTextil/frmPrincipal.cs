@@ -108,8 +108,11 @@ namespace FabricaTextil
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
-            this.dtGdViewCortes.DataSource = this.lstInd;
+            if(this.lstInd.Count!=0)
+            {
+                this.dtGdViewCortes.DataSource = this.lstInd;
+            }
+
 
             configurarGrilla();
 
