@@ -1,0 +1,6 @@
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Excepciones\obj\Debug\Excepciones.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
