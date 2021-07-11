@@ -67,7 +67,7 @@ namespace FabricaTextil
                         this.dtInd = _acceso.LoadDTFromBD();
 
                         dtGdViewCortes.DataSource = this.dtInd;
-                        configurarGrilla();
+                        ConfigurarGrilla();
                         
                     });
                 }
@@ -144,7 +144,7 @@ namespace FabricaTextil
             
 
 
-            configurarGrilla();
+            ConfigurarGrilla();
            this.hiloActualizador.Start();
 
         }
@@ -319,7 +319,7 @@ namespace FabricaTextil
         /// <summary>
         /// Configura el estilo de la grilla
         /// </summary>
-        private void configurarGrilla()
+        private void ConfigurarGrilla()
         {
             this.dtGdViewCortes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dtGdViewCortes.MultiSelect = false;
