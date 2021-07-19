@@ -1,0 +1,14 @@
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Test.exe.config
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Test.exe
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Test.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Serializer.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Excepciones.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Entidades.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Serializer.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\bin\Debug\Excepciones.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\obj\Debug\Test.exe
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_4\Santoliquido.JuanLuca.2A.TPFINAL\Test\obj\Debug\Test.pdb

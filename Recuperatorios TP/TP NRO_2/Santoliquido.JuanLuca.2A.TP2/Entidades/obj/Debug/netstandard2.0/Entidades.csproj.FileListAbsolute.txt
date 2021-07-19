@@ -1,0 +1,23 @@
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Excepciones.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Excepciones.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CopyComplete
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Serializer.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\TP NRO_3\Santoliquido.JuanLuca.2A.TPFINAL\Entidades\bin\Debug\netstandard2.0\Serializer.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\jluca\OneDrive\Escritorio\tp_laboratorio_2\Recuperatorios TP\TP NRO_2\Santoliquido.JuanLuca.2A.TP2\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache

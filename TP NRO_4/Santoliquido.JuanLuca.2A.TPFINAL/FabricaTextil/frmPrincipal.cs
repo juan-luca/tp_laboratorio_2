@@ -52,15 +52,15 @@ namespace FabricaTextil
             {
                 while (this.pauseThread == false)
                 {
-                Thread.Sleep(500);
-
+                    Thread.Sleep(500);
+                    
                     if (this.dtGdViewCortes.SelectedRows.Count > 0)
                     {
                         rowSelected = this.dtGdViewCortes.SelectedRows[0].Index;
                     }
                        
                     if (this.dtGdViewCortes.InvokeRequired)
-                {
+                    {
                     this.dtGdViewCortes.BeginInvoke((MethodInvoker)delegate ()
                     {
                         dtGdViewCortes.DataSource = null;
@@ -70,7 +70,16 @@ namespace FabricaTextil
                         ConfigurarGrilla();
                         
                     });
-                }
+                        if (this.lblMtsTela.InvokeRequired)
+                        {
+                            this.lblMtsTela.BeginInvoke((MethodInvoker)delegate ()
+                            {
+                                this.lblMtsTela.Text = this._acceso.TelaDisponibleBD().ToString();
+
+                            });
+
+                        }
+                    }       
                 }
             }
             catch(Exception)
@@ -96,31 +105,50 @@ namespace FabricaTextil
             {
                 if(nuevoCorte.t1.Numero + nuevoCorte.t2.Numero + nuevoCorte.t3.Numero + nuevoCorte.t4.Numero + nuevoCorte.t5.Numero> 0)
                     {
-                        if (Extensor.EspacioDisponible.Verificador(FB)> nuevoCorte.t1.Numero + nuevoCorte.t2.Numero + nuevoCorte.t3.Numero + nuevoCorte.t4.Numero + nuevoCorte.t5.Numero)
-                        {
+                        /*if (_acceso.TelaDisponibleBD() > nuevoCorte.t1.Numero*this.FB.costo.+ nuevoCorte.t2.Numero + nuevoCorte.t3.Numero + nuevoCorte.t4.Numero + nuevoCorte.t5.Numero)
+                        {*/
                             if (nuevoCorte.chkJogging.Checked)
+                            {
+                            double mtsJogging = 0;
+                            mtsJogging = nuevoCorte.t1.Numero * this.FB.costo.JT1 + nuevoCorte.t2.Numero * this.FB.costo.JT2 + nuevoCorte.t3.Numero * this.FB.costo.JT3 + nuevoCorte.t4.Numero * this.FB.costo.JT4 + nuevoCorte.t5.Numero * this.FB.costo.JT5;
+                            if (_acceso.TelaDisponibleBD() > mtsJogging)
                             {
                                 Joggings corte = new Joggings(nuevoCorte.t1.Numero, nuevoCorte.t2.Numero, nuevoCorte.t3.Numero, nuevoCorte.t4.Numero, nuevoCorte.t5.Numero, nuevoCorte.chkVariante.Checked, (EMarca)nuevoCorte.cbMarca.SelectedIndex, nuevoCorte.txtModelo.Text);
 
-                                if (this._acceso.InsertarCorte(corte))
+                                if (this._acceso.InsertarCorte(corte) && this._acceso.UpdateTela(mtsJogging*-1))
                                 {
                                     MessageBox.Show("Se agrego el corte con exito");
+                                }else
+                                {
+                                    throw new SinEspacioException();
                                 }
+                            }
+                                
 
                             }
                             else
                             {
-                                Buzos corte = new Buzos(nuevoCorte.t1.Numero, nuevoCorte.t2.Numero, nuevoCorte.t3.Numero, nuevoCorte.t4.Numero, nuevoCorte.t5.Numero, nuevoCorte.chkVariante.Checked, (EMarca)nuevoCorte.cbMarca.SelectedIndex, nuevoCorte.txtModelo.Text);
-                                if (this._acceso.InsertarCorte(corte))
+                            double mtsBuzo = 0;
+                            mtsBuzo = nuevoCorte.t1.Numero * this.FB.costo.BT1 + nuevoCorte.t2.Numero * this.FB.costo.BT2 + nuevoCorte.t3.Numero * this.FB.costo.BT3 + nuevoCorte.t4.Numero * this.FB.costo.BT4 + nuevoCorte.t5.Numero * this.FB.costo.BT5;
+
+                                if (_acceso.TelaDisponibleBD() > mtsBuzo && this._acceso.UpdateTela(mtsBuzo * -1))
                                 {
-                                    MessageBox.Show("Se agrego el corte con exito");
-                                }
+                                    Buzos corte = new Buzos(nuevoCorte.t1.Numero, nuevoCorte.t2.Numero, nuevoCorte.t3.Numero, nuevoCorte.t4.Numero, nuevoCorte.t5.Numero, nuevoCorte.chkVariante.Checked, (EMarca)nuevoCorte.cbMarca.SelectedIndex, nuevoCorte.txtModelo.Text);
+                                    if (this._acceso.InsertarCorte(corte))
+                                    {
+                                        MessageBox.Show("Se agrego el corte con exito");
+                                    }else
+                                    {
+                                        throw new SinEspacioException();
+                                    }
+
+                                }   
                             }
-                        }
+                        /*}
                         else
                         {
                             throw new SinEspacioException();
-                        }
+                        }*/
                     }else
                     {
                         throw new CorteVacioException();
@@ -169,15 +197,28 @@ namespace FabricaTextil
                 }
                 
                 int variante = -1;
-                int cantOG = 0;
-                int cantNW = 0;
+                double mtsOG = 0;
+                double mtsNW = 0;
+                double diferenciaMts = 0;
                 Indumentaria corte = this._acceso.BuscarCorte(id);
-               
-                cantOG += corte.S;
-                cantOG += corte.M;
-                cantOG += corte.L;
-                cantOG += corte.XL;
-                cantOG += corte.XXL;
+                if(corte is Buzos)
+                {
+                    mtsOG += corte.S*this.FB.costo.BT1;
+                    mtsOG += corte.M * this.FB.costo.BT2;
+                    mtsOG += corte.L * this.FB.costo.BT3;
+                    mtsOG += corte.XL * this.FB.costo.BT4;
+                    mtsOG += corte.XXL * this.FB.costo.BT5;
+                }
+                else
+                {
+                    mtsOG += corte.S * this.FB.costo.JT1;
+                    mtsOG += corte.M * this.FB.costo.JT2;
+                    mtsOG += corte.L * this.FB.costo.JT3;
+                    mtsOG += corte.XL * this.FB.costo.JT4;
+                    mtsOG += corte.XXL * this.FB.costo.JT5;
+                }
+
+                
                 frmNuevaPrenda modificarCorte = new frmNuevaPrenda();
                 modificarCorte.Text = "Modificar corte";
                 modificarCorte.chkJogging.Enabled = false;
@@ -230,17 +271,32 @@ namespace FabricaTextil
                 if (rta == DialogResult.OK)
                 {
 
-                    cantNW += modificarCorte.t1.Numero;
-                    cantNW += modificarCorte.t2.Numero;
-                    cantNW += modificarCorte.t3.Numero;
-                    cantNW += modificarCorte.t4.Numero;
-                    cantNW += modificarCorte.t5.Numero;
-                    if(cantNW > 0)
+                    
+                    if (corte is Buzos)
                     {
-                        if (cantNW > cantOG)
+                        mtsNW += modificarCorte.t1.Numero * this.FB.costo.BT1;
+                        mtsNW += modificarCorte.t2.Numero * this.FB.costo.BT2;
+                        mtsNW += modificarCorte.t3.Numero * this.FB.costo.BT3;
+                        mtsNW += modificarCorte.t4.Numero * this.FB.costo.BT4;
+                        mtsNW += modificarCorte.t5.Numero * this.FB.costo.BT5;
+                    }
+                    else
+                    {
+                        mtsNW += modificarCorte.t1.Numero * this.FB.costo.JT1;
+                        mtsNW += modificarCorte.t2.Numero * this.FB.costo.JT2;
+                        mtsNW += modificarCorte.t3.Numero * this.FB.costo.JT3;
+                        mtsNW += modificarCorte.t4.Numero * this.FB.costo.JT4;
+                        mtsNW += modificarCorte.t5.Numero * this.FB.costo.JT5;
+                    }
+                    diferenciaMts = mtsNW - mtsOG;
+                    if (mtsNW > 0)
+                    {
+                        if (mtsNW > mtsOG)
                         {
-                            int diferencia = cantNW - cantOG;
-                            if (!(Extensor.EspacioDisponible.Verificador(FB) >= diferencia))
+                             
+                            
+                            
+                            if (!(_acceso.TelaDisponibleBD() >= diferenciaMts))
                             {
                                 throw new SinEspacioException();
                             }
@@ -290,7 +346,7 @@ namespace FabricaTextil
 
                         
 
-                        if(this._acceso.UpdateCorte(corte))
+                        if(this._acceso.UpdateCorte(corte) && this._acceso.UpdateTela(diferenciaMts*-1))
                         {
                             MessageBox.Show("Se modifico el corte con exito");
                         }
@@ -425,6 +481,7 @@ namespace FabricaTextil
                 this.lstInd.Clear();
                 dtGdViewCortes.DataSource = null;
                 this.FB = Fabrica.Leer();
+                this._acceso.ReemplazarTela(this.FB.TelaDisponible);
                 foreach(Buzos b in this.FB.Buzos)
                 {
                     this.lstInd.Add(b);
@@ -462,6 +519,24 @@ namespace FabricaTextil
         private void Cerrar(object sender, FormClosingEventArgs e)
         {
             pauseThread = true;
+        }
+
+        private void btnAgregarMtsTela_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.FB.TelaDisponible += this.txtAddTela.Numero;
+                this._acceso.UpdateTela(this.txtAddTela.Numero);
+                this.txtAddTela.EditText = "0";
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.lblMtsTela.Text = this._acceso.TelaDisponibleBD().ToString();
         }
     }
 }

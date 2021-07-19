@@ -16,6 +16,7 @@ namespace Entidades
         private SqlConnection conexion;
         private SqlCommand comando;
         private string conexionString;
+        
 
         #endregion
 
@@ -334,11 +335,49 @@ namespace Entidades
         /// Devuelve el espacio ocupado en la BD
         /// </summary>
         /// <returns>Espacio ocupado</returns>
-        public int EspacioOcupadoBD()
+        public double TelaDisponibleBD()
         {
-            int cantOcupada = 0;
-
+            double telaDisponible = 0;
             try
+            {
+                this.comando = new SqlCommand();
+
+                this.comando.CommandType = CommandType.Text;
+
+                this.comando.Connection = this.conexion;
+
+
+                this.comando.CommandText = "select MetrosTela FROM MetrosTela";
+
+                this.conexion.Open();
+
+                SqlDataReader oDr = this.comando.ExecuteReader();
+                
+
+                if (oDr.Read())
+                {
+
+                    Double.TryParse(oDr["MetrosTela"].ToString(), out telaDisponible);
+
+                }
+
+                oDr.Close();
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+            return telaDisponible;
+
+            /*try
             {
                 this.comando = new SqlCommand();
 
@@ -366,7 +405,7 @@ namespace Entidades
                     Int32.TryParse(oDr["L"].ToString(),out L);
                     Int32.TryParse(oDr["XL"].ToString(),out XL);
                     Int32.TryParse(oDr["XXL"].ToString(),out XXL);
-                    cantOcupada += S + M + L + XL + XXL;
+                    telaOcupada += S + M + L + XL + XXL;
 
                 }
 
@@ -383,11 +422,92 @@ namespace Entidades
                 {
                     this.conexion.Close();
                 }
+            }*/
+
+
+        }
+        public bool ReemplazarTela(double t)
+        {
+            bool todoOk = false;
+
+            string sql = "UPDATE MetrosTela SET MetrosTela=@t";
+
+
+            try
+            {
+                this.comando = new SqlCommand();
+
+                this.comando.CommandType = CommandType.Text;
+
+                this.comando.Connection = this.conexion;
+                
+                this.comando.Parameters.AddWithValue("@t", t);
+
+                this.comando.CommandText = sql;
+
+                this.conexion.Open();
+
+                this.comando.ExecuteNonQuery();
+
+                todoOk = true;
+            }
+            catch (Exception ex)
+            {
+
+                todoOk = false;
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
             }
 
-            return cantOcupada;
+            return todoOk;
         }
+        public bool UpdateTela(double t)
+        {
+            bool todoOk = false;
 
+            string sql = "UPDATE MetrosTela SET MetrosTela=@t";
+
+
+            try
+            {
+                this.comando = new SqlCommand();
+
+                this.comando.CommandType = CommandType.Text;
+
+                this.comando.Connection = this.conexion;
+                t = t + this.TelaDisponibleBD();
+                this.comando.Parameters.AddWithValue("@t", t);
+
+                this.comando.CommandText = sql;
+
+                this.conexion.Open();
+
+                this.comando.ExecuteNonQuery();
+
+                todoOk = true;
+            }
+            catch (Exception ex)
+            {
+
+                todoOk = false;
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+
+            return todoOk;
+        }
         #endregion
 
         #region Insertar Corte
@@ -622,6 +742,7 @@ namespace Entidades
 
             try
             {
+                FB.TelaDisponible = this.TelaDisponibleBD();
                 int lastId = LastID();
                while(finish==false)
                {
@@ -635,7 +756,7 @@ namespace Entidades
                     }
                     id++;
                }
-
+                
                 
             }
             catch (Exception ex)

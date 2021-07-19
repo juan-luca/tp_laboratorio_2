@@ -29,6 +29,7 @@ public static class Calculadora
 				tot = num1 / num2;
 				break;
 		}
+
 		return tot;
 	}
 	/// <summary>

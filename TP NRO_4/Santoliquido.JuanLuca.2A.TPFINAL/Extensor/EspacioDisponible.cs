@@ -14,7 +14,7 @@ namespace Extensor
         /// </summary>
         /// <param name="FB"></param>
         /// <returns>Espacio disponible</returns>
-        public static int Verificador(this Fabrica FB)
+       /* public static int Verificador(this Fabrica FB)
         {
             
             try
@@ -36,6 +36,6 @@ namespace Extensor
                 throw new SinEspacioException();
             }
             
-        }
+        }*/
     }
 }

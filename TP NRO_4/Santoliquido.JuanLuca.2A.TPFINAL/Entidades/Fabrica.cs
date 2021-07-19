@@ -11,9 +11,11 @@ namespace Entidades
 {
     public class Fabrica
     {
-        private int espacioTotal;
+        private double _telaDisponible;
         private List<Buzos> _buzos;
         private List<Joggings> _joggings;
+        public CostosTela costo;
+        
 
         
         /// <summary>
@@ -33,10 +35,10 @@ namespace Entidades
         /// <summary>
         /// propiedad: carga los atributos
         /// </summary>
-        public int EspacioTotal
+        public double TelaDisponible
         { 
-            get { return espacioTotal; } 
-            set { espacioTotal = value; } 
+            get { return _telaDisponible; } 
+            set { _telaDisponible = value; } 
         }
 
         /// <summary>
@@ -46,8 +48,8 @@ namespace Entidades
         {
             this._buzos = new List<Buzos>();
             this._joggings = new List<Joggings>();
-
-            this.espacioTotal = 160;
+            this.costo = new CostosTela();
+            //this._telaTotal = 160;
 
              
 
@@ -57,9 +59,9 @@ namespace Entidades
         /// Constructor: inicializa los atributos
         /// </summary>
         /// <param name="cantidad">int</param>
-        public Fabrica(int espacioTotal) : this()
+        public Fabrica(int _telaTotal) : this()
         {
-            this.espacioTotal = espacioTotal;
+            this._telaDisponible = _telaTotal;
         }
         
         /// <summary>
@@ -129,27 +131,35 @@ namespace Entidades
                         
                         if(i is Buzos)
                         {
-                            if (f.EspacioDisponible() > (i.S + i.M + i.L + i.XL + i.XXL))
+                           // double mtsCorteBuzo = 0;
+                           // mtsCorteBuzo = i.S * f.costo.BT1 + i.M * f.costo.BT2 + i.L * f.costo.BT3 + i.XL * f.costo.BT4 + i.XXL * f.costo.BT5;
+
+                            f._buzos.Add((Buzos)i);
+                            /*if (f._telaDisponible > mtsCorteBuzo)
                             {
                                 //i.Id = f.GenerarId();
                                 f._buzos.Add((Buzos)i);
+                                f.TelaDisponible -= mtsCorteBuzo;
                             }
                             else
                             {
                                 throw new SinEspacioException();
-                            }
+                            }*/
                         }
                         else
                         {
-                            if (f.EspacioDisponible() > (i.S + i.M + i.L + i.XL + i.XXL))
+                            //double mtsCorteJogging = i.S* f.costo.JT1 + i.M * f.costo.JT2 + i.L * f.costo.JT3 + i.XL * f.costo.JT4 + i.XXL * f.costo.JT5;
+                            f._joggings.Add((Joggings)i);
+                           /* if (f._telaDisponible > mtsCorteJogging)
                             {
                                 //i.Id = f.GenerarId();
                                 f._joggings.Add((Joggings)i);
+                                f.TelaDisponible -= mtsCorteJogging;
                             }
                             else
                             {
                                 throw new SinEspacioException();
-                            }
+                            }*/
                         }
                     }else
                     {
@@ -203,28 +213,29 @@ namespace Entidades
         /// Verifica que espacio hay en la fabrica 
         /// </summary>
         /// <returns> Devuelve la cantidad de prendas que le quedan por almacenar</returns>
-        public int EspacioDisponible()
+        /*public double TelaDisponible()
         {
             try
             {
-            int cantidadOcupada = 0;
+            double telaOcupada = 0;
             foreach (Buzos item in this._buzos)
             {
-                cantidadOcupada += item.S + item.M + item.L + item.XL + item.XXL;
+                    telaOcupada += item.S*this.costo.BT1 + item.M * this.costo.BT2 + item.L * this.costo.BT3 + item.XL * this.costo.BT4 + item.XXL * this.costo.BT5;
             }
+
                 foreach (Joggings item in this._joggings)
                 {
-                    cantidadOcupada += item.S + item.M + item.L + item.XL + item.XXL;
+                    telaOcupada += item.S * this.costo.JT1 + item.M * this.costo.JT2 + item.L * this.costo.JT3 + item.XL * this.costo.JT4+ item.XXL * this.costo.JT5;
                 }
 
-                return this.espacioTotal-cantidadOcupada;
+                return this._telaTotal - telaOcupada;
             }
             catch (Exception )
             {
                 throw new Exception();
             }
             
-        }
+        }*/
         /// <summary>
         /// Genera el ID siguiente al ultimo creado
         /// </summary>
