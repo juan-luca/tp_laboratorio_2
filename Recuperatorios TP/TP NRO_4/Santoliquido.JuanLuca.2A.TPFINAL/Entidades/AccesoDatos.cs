@@ -31,7 +31,7 @@ namespace Entidades
         /// </summary>
         public AccesoDatos()
         {
-            this.conexionString = "Data Source=DESKTOP-TEO2IE6\\SQLEXPRESS;Initial Catalog=Santoliquido_TP4_BD;Integrated Security=True";
+            this.conexionString = @"Data Source = localhost\SQLEXPRESS; Initial Catalog = Santoliquido_TP4_BD; Integrated Security = True";
             this.conexion = new SqlConnection();
             this.conexion.ConnectionString = conexionString;
         }
